@@ -8,14 +8,18 @@
 <script>
 import Player from '@vimeo/player'
 
-var handstickPlayer = new Player('handstick');
-   handstickPlayer.on('play', function() {
-       console.log('played the handstick video!');
-   });
+export default {
+  mounted() {
+    var handstickPlayer = new Player('handstick');
+       handstickPlayer.on('play', function() {
+           console.log('played the handstick video!');
+       });
 
-   var playerTwoPlayer = new Player('playertwo');
-   playerTwoPlayer.on('play', function() {
-       console.log('played the player 2.0 video!');
-   });
+       var playerTwoPlayer = new Player('playertwo');
+       playerTwoPlayer.on('play', function() {
+           console.log('played the player 2.0 video!');
+       });
+  }
+}
 
 </script>

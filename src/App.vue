@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <!-- <main-video :identifier="identifier1" :source="source" @onplay="videoPlayed" @onended="videoEnded" @error="errorOccured" :poster="imgsrc"></main-video> -->
-    <i :class="{'fa fa-circle-o-notch fa-spin' : loading}" style="font-size:48px;"></i>
-    <main-video :identifier="identifier2" :source="source" @onplay="videoPlayed" @onended="videoEnded" @error="errorOccured" :poster="imgsrc" @waiting="loading = true" @playing="loading = false" @canplay="loading = false" @seeked="loading = true"></main-video>
+  <!--   <i :class="{'fa fa-circle-o-notch fa-spin' : loading}" style="font-size:48px;"></i>
+    <main-video :identifier="identifier2" :source="source" @onplay="videoPlayed" @onended="videoEnded" @error="errorOccured" :poster="imgsrc" @waiting="loading = true" @playing="loading = false" @canplay="loading = false" @seeked="loading = true"></main-video> -->
+  <vimeo-player></vimeo-player>
 
   </div>
 </template>
 
 <script>
 import MainVideo from './components/MainVideo'
+import VimeoPlayer from './components/VimeoPlayer'
 export default {
   name: 'app',
   components: {
-    MainVideo
+    VimeoPlayer
   },
   data() {
     return {
